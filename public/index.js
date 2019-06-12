@@ -33,6 +33,7 @@ searchForm.addEventListener("submit", (e) => {
                 pokePic.innerHTML = "<img src='./img/missing.jpg'>";
             } else {
                 pokePic.innerHTML = data.pokemon;
+                returnText.innerHTML = data.name;
             }
         })
     })

@@ -18,14 +18,15 @@ app.get('/pokemon', (req, res) => {
         });
     }
 
-    pokemonSearch(req.query.pokemon, req.query.shiny, (error, {pokemon} = {}) => {
+    pokemonSearch(req.query.pokemon, req.query.shiny, (error, {pokemon, name} = {}) => {
         if (error) {
             return res.send({error});
         }
 
         else {
             res.send({
-                pokemon
+                pokemon,
+                name
             })
         }
     })

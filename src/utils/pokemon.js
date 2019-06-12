@@ -5,7 +5,6 @@ const pokemonSearch = (pokemon, shiny, callback) => {
     const url = "https://pokeapi.co/api/v2/pokemon/" + pokemon;
 
     request({url, json: true}, (error, {body}) => {
-        console.log(shiny);
         if(error) {
             callback({
                 message: 'Unable to connect to PokeAPI',
@@ -18,11 +17,13 @@ const pokemonSearch = (pokemon, shiny, callback) => {
             }, undefined);
         } else if (shiny == "Yes") {
             callback(undefined, {
-                pokemon: `<img src=${body.sprites.front_shiny}>`
+                pokemon: `<img src=${body.sprites.front_shiny}>`,
+                name: body.species.name
             })
         } else {
             callback(undefined, {
-                pokemon: `<img src=${body.sprites.front_default}>`
+                pokemon: `<img src=${body.sprites.front_default}>`,
+                name: body.species.name
             }) 
         }
     })
