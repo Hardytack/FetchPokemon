@@ -1,0 +1,46 @@
+* {
+    font-family: 'Courier New', Courier, monospace
+}
+
+#container {
+    width: 350px;
+    margin: 0 auto;
+    border: 1px solid black;
+    background: #e8e8e8;
+    display: grid;
+    justify-items: center;
+    height: 500px;
+    grid-template-rows: 70px 1fr 3fr 1fr;
+}
+
+h1 {
+    color: #ff8282;
+    text-align: center;
+    
+}
+
+
+#container form input {
+    border: none;
+    background: none;
+    border-bottom: 1px #33333331 solid;
+}
+
+#container form button {
+    margin-top: 10px;
+    border: none;
+    background: #ff8282;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#pokePic {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+#pokePic img {
+    width: 100%;
+}
